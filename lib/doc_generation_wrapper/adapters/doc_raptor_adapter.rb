@@ -1,8 +1,8 @@
 require_relative 'abstract'
 require_relative 'implementation'
-require_relative 'doc_raptor/proxy'
-require_relative 'doc_raptor/command'
-require_relative 'doc_raptor/query'
+require_relative 'doc_raptor_service/proxy'
+require_relative 'doc_raptor_service/command'
+require_relative 'doc_raptor_service/query'
 
 require 'doc_raptor'
 
@@ -12,11 +12,11 @@ module DocGenerationWrapper
       include Implementation
 
       def create! options
-        DocRaptor::Command.new.create! options
+        DocRaptorService::Command.new.create! options
       end
 
       def status status_id
-        DocRaptor::Query.new.status status_id
+        DocRaptorService::Query.new.status status_id
       end
 
     end

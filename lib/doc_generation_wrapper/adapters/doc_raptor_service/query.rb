@@ -1,6 +1,6 @@
 module DocGenerationWrapper
   module Adapter
-    module DocRaptor
+    module DocRaptorService
 
       class Query
 

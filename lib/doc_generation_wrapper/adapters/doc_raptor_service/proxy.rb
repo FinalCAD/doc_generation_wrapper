@@ -1,6 +1,6 @@
 module DocGenerationWrapper
   module Adapter
-    module DocRaptor
+    module DocRaptorService
       module Proxy
         extend self
 
