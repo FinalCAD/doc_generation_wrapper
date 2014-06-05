@@ -1,3 +1,5 @@
+require 'doc_raptor'
+
 module DocGenerationWrapper
   module Adapter
     module DocRaptorService
@@ -7,7 +9,7 @@ module DocGenerationWrapper
         def method_missing method, *args
           tries = 0
           begin
-            ::DocRaptor.send method, *args
+            DocRaptor.send method, *args
           rescue Errno::ETIMEDOUT, Errno::ENOENT, Errno::ECONNRESET, Timeout::Error
             (tries += 1) < 3 ? retry : raise
           rescue DocRaptorException::DocumentCreationFailure => exception

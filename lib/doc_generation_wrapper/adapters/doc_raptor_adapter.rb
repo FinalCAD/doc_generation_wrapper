@@ -1,10 +1,9 @@
 require_relative 'abstract'
 require_relative 'implementation'
+
 require_relative 'doc_raptor_service/proxy'
 require_relative 'doc_raptor_service/command'
 require_relative 'doc_raptor_service/query'
-
-require 'doc_raptor'
 
 module DocGenerationWrapper
   module Adapter
