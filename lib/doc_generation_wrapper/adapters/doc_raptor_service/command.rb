@@ -4,8 +4,10 @@ module DocGenerationWrapper
 
       class Command
 
-        def create! options
+        def create! options, &respond_callback
           Proxy.create! options
+          respond_callback.call Proxy.status_id if block_given?
+          nil
         end
 
       end

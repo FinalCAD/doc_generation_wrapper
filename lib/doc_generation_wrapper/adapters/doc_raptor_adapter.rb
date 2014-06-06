@@ -10,8 +10,8 @@ module DocGenerationWrapper
     class DocRaptorAdapter < Abstract
       include Implementation
 
-      def create! options
-        DocRaptorService::Command.new.create! options
+      def create! options, &respond_callback
+        DocRaptorService::Command.new.create! options, &respond_callback
       end
 
       def status status_id
