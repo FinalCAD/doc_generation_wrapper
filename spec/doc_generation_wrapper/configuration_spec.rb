@@ -4,11 +4,16 @@ module DocGenerationWrapper
   describe Configuration do
     let(:configuration) { Configuration.new }
 
-    describe '#adapter' do
-      let(:adapter) { :doc_raptor }
+    describe 'default config' do
+      let(:adapter)      { :doc_raptor }
+      let(:service_host) { 'http://0.0.0.0:5000' }
 
-      it 'the default is doc_raptor' do
+      it 'adapter is doc_raptor' do
         expect(configuration.adapter).to eq(adapter)
+      end
+
+      it 'service host is local sinatra hosting' do
+        expect(configuration.service_host).to eq(service_host)
       end
     end
 

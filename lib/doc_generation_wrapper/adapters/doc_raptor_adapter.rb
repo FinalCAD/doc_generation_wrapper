@@ -1,5 +1,4 @@
 require_relative 'abstract'
-require_relative 'implementation'
 
 require_relative 'doc_raptor_service/proxy'
 require_relative 'doc_raptor_service/command'
@@ -8,7 +7,6 @@ require_relative 'doc_raptor_service/query'
 module DocGenerationWrapper
   module Adapter
     class DocRaptorAdapter < Abstract
-      include Implementation
 
       def create! options, &respond_callback
         DocRaptorService::Command.new.create! options, &respond_callback

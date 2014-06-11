@@ -1,6 +1,8 @@
 # DocGenerationWrapper
 
-TODO: Write a gem description
+DocGenerationWrapper is a library permit to abstract call for document generation, when you use DocRaptor for generate docuementation from HTML to PDF or XLS, but you want make generation faster on local machine, don't call DocRaptor service every time you develop, this library permit to switch on local generation and keep DocRaptor behavior on production.
+
+This library is simple adapter pattern for switching on local generation document service, you can install and run the service https://github.com/FinalCAD/doc_generation_service for locale use.
 
 ## Installation
 
@@ -18,7 +20,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+## Rails
+
+You can add file on app/config/initializers/doc_generation_wrapper.rb
+
+locale use with PrinceXML Service
+
+```
+  DocGenerationWrapper.configure do |config|
+    config.adapter      = :prince_xml
+    config.service_host = 'http://0.0.0.0:5000'
+  end
+```
+
+Production use with DocRaptor
+
+```
+  DocGenerationWrapper.configure do |config|
+    config.adapter = :doc_raptor
+  end
+```
 
 ## Contributing
 

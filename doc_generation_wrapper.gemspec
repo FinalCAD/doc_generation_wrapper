@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['joel.azemar@gmail.com']
   spec.summary       = %q{Wrapper for DocRaptor or Local PrinceXML generation}
   spec.description   = %q{Wrapper for DocRaptor or Local PrinceXML generation of document, purpose is help to develop quickly}
-  spec.homepage      = 'https://github.com/joel/doc_generation_wrapper'
+  spec.homepage      = 'https://github.com/FinalCAD/doc_generation_wrapper'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec',   '~> 2.14'
 
   spec.add_dependency 'doc_raptor', '~> 0.3.2'
+  spec.add_dependency 'json', '~> 1.8'
 
   spec.required_ruby_version = '~> 2.1'
 end

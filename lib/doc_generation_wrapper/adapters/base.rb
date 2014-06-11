@@ -14,7 +14,7 @@ module DocGenerationWrapper
       def self.klass_adapter adapter_symbol
         case adapter_symbol
         when :doc_raptor then :DocRaptorAdapter
-        when :prince_xml then :PrinceXml
+        when :prince_xml then :PrinceXmlAdapter
         else raise UnsupportedAdapter.new
         end
       end
