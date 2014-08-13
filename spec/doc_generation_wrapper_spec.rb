@@ -29,7 +29,7 @@ module DocGenerationWrapper
       let(:id) { :id }
 
       before do
-        expect(DocRaptor).to receive(:status).with(id)
+        expect(DocRaptor).to receive(:status).with(id, true)
       end
 
       specify do
