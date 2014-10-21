@@ -1,4 +1,4 @@
-# DocGenerationWrapper
+# DocGenerationWrapper [![Build Status](https://travis-ci.org/FinalCAD/doc_generation_wrapper.svg)](https://travis-ci.org/FinalCAD/doc_generation_wrapper)
 
 DocGenerationWrapper is a library permit to abstract call for document generation, when you use DocRaptor for generate docuementation from HTML to PDF or XLS, but you want make generation faster on local machine, don't call DocRaptor service every time you develop, this library permit to switch on local generation and keep DocRaptor behavior on production.
 
