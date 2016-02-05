@@ -35,5 +35,6 @@ module DocGenerationWrapper
     def initialize
       @adapter = Adapter::Base.create(DocGenerationWrapper.configuration.adapter)
     end
+
   end
 end

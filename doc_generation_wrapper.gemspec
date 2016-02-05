@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 2.99'
 
   spec.add_dependency 'rest-client', '~> 1.8'
-  spec.add_dependency 'doc_raptor', '~> 0.3'
+  spec.add_dependency 'docraptor', '~> 0.2'
   spec.add_dependency 'json', '~> 1.8'
 end

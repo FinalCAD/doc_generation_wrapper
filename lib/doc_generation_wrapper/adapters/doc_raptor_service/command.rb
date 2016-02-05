@@ -5,8 +5,8 @@ module DocGenerationWrapper
       class Command
 
         def create! options, &respond_callback
-          Proxy.create! options
-          respond_callback.call Proxy.status_id if block_given?
+          response = DocRaptor::DocApi.new.create_async_doc(options)
+          respond_callback.call response.status_id if block_given?
           nil
         end
 
