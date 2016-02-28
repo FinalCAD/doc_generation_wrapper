@@ -22,6 +22,10 @@ module DocGenerationWrapper
         DocRaptorService::Query.new.status status_id
       end
 
+      def document document_id
+        DocRaptorService::Query.new.document document_id
+      end
+
     end
   end
 end
