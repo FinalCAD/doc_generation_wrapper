@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'doc_raptor'
+require 'docraptor'
 
 module DocGenerationWrapper
 
@@ -17,7 +17,9 @@ module DocGenerationWrapper
       let(:options) {{}}
 
       before do
-        expect(DocRaptor).to receive(:create!).with(options)
+        doc_raptor_double = double
+        expect(doc_raptor_double).to receive(:create_async_doc).with(options)
+        expect(DocRaptor::DocApi).to receive(:new) { doc_raptor_double }
       end
 
       specify do
@@ -29,7 +31,9 @@ module DocGenerationWrapper
       let(:id) { :id }
 
       before do
-        expect(DocRaptor).to receive(:status).with(id, true)
+        doc_raptor_double = double
+        expect(doc_raptor_double).to receive(:get_async_doc_status).with(id)
+        expect(DocRaptor::DocApi).to receive(:new) { doc_raptor_double }
       end
 
       specify do

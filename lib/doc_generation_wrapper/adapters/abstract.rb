@@ -10,6 +10,10 @@ module DocGenerationWrapper
         raise NotImplementedError
       end
 
+      def document document_id
+        raise NotImplementedError
+      end        
+
     end
   end
 end

@@ -1,8 +1,14 @@
 require_relative 'abstract'
 
-require_relative 'doc_raptor_service/proxy'
 require_relative 'doc_raptor_service/command'
 require_relative 'doc_raptor_service/query'
+
+require 'docraptor'
+
+DocRaptor.configure do |dr|
+  dr.username  = ENV['DOCRAPTOR_API_KEY'] # "YOUR_API_KEY_HERE" # this key works for test documents
+  # dr.debugging = true
+end
 
 module DocGenerationWrapper
   module Adapter
@@ -14,6 +20,10 @@ module DocGenerationWrapper
 
       def status status_id
         DocRaptorService::Query.new.status status_id
+      end
+
+      def document document_id
+        DocRaptorService::Query.new.document document_id
       end
 
     end
