@@ -14,7 +14,18 @@ module DocGenerationWrapper
     end
 
     describe '#create!' do
-      let(:options) {{}}
+      let(:options) {{
+        async: true,
+        document_type: :odf,
+        javascript: false,
+        pipeline: 6,
+        test: true,
+        prince_xml: {
+          baseurl: nil,
+          media: :print,
+          javascript: false
+        }
+      }}
 
       before do
         doc_raptor_double = double
