@@ -1,3 +1,7 @@
+### VERSION 0.2.1
+
+* bug fix
+  * update rest-client version to 2.0.2 to fix error when runnin on ruby > 2.4.0
 ### VERSION 0.0.4
 
 * bug fix

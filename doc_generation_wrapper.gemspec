@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 10.3'
   spec.add_development_dependency 'rspec', '~> 2.99'
 
-  spec.add_dependency 'rest-client', '~> 1.8'
+  spec.add_dependency 'rest-client', '~> 2.0.2'
   spec.add_dependency 'docraptor', '~> 0.2'
   spec.add_dependency 'json', '~> 1.8'
 end
